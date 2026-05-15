@@ -1,0 +1,31 @@
+[
+  {
+    "trace_id": "abc123def456",
+    "spans": [
+      {"span_id": "s1", "service": "api-gateway", "operation": "POST /api/v1/orders", "start_ms": 0, "duration_ms": 16200, "status": "ERROR", "tags": {"http.status_code": 503}},
+      {"span_id": "s2", "parent_span_id": "s1", "service": "order-service", "operation": "createOrder", "start_ms": 5, "duration_ms": 16100, "status": "ERROR", "tags": {"error": "PaymentGatewayUnavailableException"}},
+      {"span_id": "s3", "parent_span_id": "s2", "service": "inventory-service", "operation": "checkStock", "start_ms": 10, "duration_ms": 150, "status": "OK", "tags": {"items_checked": 2}},
+      {"span_id": "s4", "parent_span_id": "s2", "service": "payment-service", "operation": "processPayment", "start_ms": 200, "duration_ms": 15800, "status": "ERROR", "tags": {"error": "ConnectionTimeout", "gateway": "stripe-prod-01", "retries": 3}},
+      {"span_id": "s5", "parent_span_id": "s4", "service": "payment-service", "operation": "connectGateway", "start_ms": 200, "duration_ms": 5000, "status": "ERROR", "tags": {"error": "timeout", "attempt": 1}},
+      {"span_id": "s6", "parent_span_id": "s4", "service": "payment-service", "operation": "connectGateway", "start_ms": 5300, "duration_ms": 5000, "status": "ERROR", "tags": {"error": "timeout", "attempt": 2}},
+      {"span_id": "s7", "parent_span_id": "s4", "service": "payment-service", "operation": "connectGateway", "start_ms": 10500, "duration_ms": 5000, "status": "ERROR", "tags": {"error": "timeout", "attempt": 3}},
+      {"span_id": "s8", "parent_span_id": "s2", "service": "notification-service", "operation": "sendFailureNotification", "start_ms": 16000, "duration_ms": 80, "status": "OK", "tags": {"channel": "email"}}
+    ]
+  },
+  {
+    "trace_id": "xyz789ghi012",
+    "spans": [
+      {"span_id": "s10", "service": "api-gateway", "operation": "GET /api/v1/products", "start_ms": 0, "duration_ms": 25, "status": "OK", "tags": {"http.status_code": 200}},
+      {"span_id": "s11", "parent_span_id": "s10", "service": "product-service", "operation": "listProducts", "start_ms": 3, "duration_ms": 18, "status": "OK", "tags": {"results": 50}},
+      {"span_id": "s12", "parent_span_id": "s11", "service": "cache-service", "operation": "getCache", "start_ms": 5, "duration_ms": 2, "status": "OK", "tags": {"cache_hit": true}}
+    ]
+  },
+  {
+    "trace_id": "mno345pqr678",
+    "spans": [
+      {"span_id": "s20", "service": "api-gateway", "operation": "POST /api/v1/orders", "start_ms": 0, "duration_ms": 9500, "status": "ERROR", "tags": {"http.status_code": 504}},
+      {"span_id": "s21", "parent_span_id": "s20", "service": "order-service", "operation": "createOrder", "start_ms": 8, "duration_ms": 9400, "status": "ERROR", "tags": {"error": "DatabaseConnectionTimeout"}},
+      {"span_id": "s22", "parent_span_id": "s21", "service": "db-service", "operation": "query", "start_ms": 15, "duration_ms": 8500, "status": "ERROR", "tags": {"error": "pool_exhausted", "queue_depth": 47}}
+    ]
+  }
+]

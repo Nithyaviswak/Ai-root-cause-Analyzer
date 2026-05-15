@@ -1,0 +1,34 @@
+# Core
+fastapi==0.115.6
+uvicorn[standard]==0.34.0
+python-multipart==0.0.20
+python-dotenv==1.0.1
+pydantic==2.10.4
+pydantic-settings==2.7.1
+
+# Google Gemini
+google-generativeai==0.8.4
+
+# Embeddings
+sentence-transformers==3.3.1
+torch>=2.0.0
+
+# Vector Store
+chromadb==0.5.23
+
+# Database
+aiosqlite==0.20.0
+aiofiles==24.1.0
+
+# HTTP Client (for RAGFlow)
+httpx==0.28.1
+
+# PDF Reports
+fpdf2>=2.8.0
+
+# TTS
+edge-tts>=6.1.12
+
+# Utilities
+numpy>=1.24.0
+sse-starlette==2.2.1

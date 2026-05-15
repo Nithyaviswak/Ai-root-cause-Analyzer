@@ -1,0 +1,18 @@
+[
+  {"timestamp": "2024-01-15T10:19:00Z", "service": "api-gateway", "cpu_percent": 32.5, "memory_percent": 45.2, "request_latency_ms": 12, "active_connections": 240, "error_rate_percent": 0.1},
+  {"timestamp": "2024-01-15T10:19:30Z", "service": "order-service", "cpu_percent": 28.1, "memory_percent": 52.8, "request_latency_ms": 45, "active_connections": 180, "error_rate_percent": 0.0},
+  {"timestamp": "2024-01-15T10:19:30Z", "service": "payment-service", "cpu_percent": 15.3, "memory_percent": 38.4, "request_latency_ms": 120, "active_connections": 90, "error_rate_percent": 0.0},
+  {"timestamp": "2024-01-15T10:20:00Z", "service": "api-gateway", "cpu_percent": 35.2, "memory_percent": 46.1, "request_latency_ms": 15, "active_connections": 260, "error_rate_percent": 0.2},
+  {"timestamp": "2024-01-15T10:20:00Z", "service": "payment-service", "cpu_percent": 18.7, "memory_percent": 39.1, "request_latency_ms": 5200, "active_connections": 95, "error_rate_percent": 15.0},
+  {"timestamp": "2024-01-15T10:20:30Z", "service": "payment-service", "cpu_percent": 22.4, "memory_percent": 41.2, "request_latency_ms": 5100, "active_connections": 120, "error_rate_percent": 45.0},
+  {"timestamp": "2024-01-15T10:20:30Z", "service": "order-service", "cpu_percent": 65.3, "memory_percent": 68.4, "request_latency_ms": 3200, "active_connections": 320, "error_rate_percent": 22.0},
+  {"timestamp": "2024-01-15T10:20:30Z", "service": "api-gateway", "cpu_percent": 55.8, "memory_percent": 52.3, "request_latency_ms": 4500, "active_connections": 480, "error_rate_percent": 18.5},
+  {"timestamp": "2024-01-15T10:21:00Z", "service": "payment-service", "cpu_percent": 8.2, "memory_percent": 35.5, "request_latency_ms": 5000, "active_connections": 0, "error_rate_percent": 100.0},
+  {"timestamp": "2024-01-15T10:21:00Z", "service": "order-service", "cpu_percent": 78.9, "memory_percent": 82.1, "request_latency_ms": 8500, "active_connections": 450, "error_rate_percent": 55.0},
+  {"timestamp": "2024-01-15T10:21:00Z", "service": "api-gateway", "cpu_percent": 72.1, "memory_percent": 58.7, "request_latency_ms": 9200, "active_connections": 650, "error_rate_percent": 40.0},
+  {"timestamp": "2024-01-15T10:21:00Z", "service": "db-service", "cpu_percent": 45.6, "memory_percent": 71.3, "request_latency_ms": 450, "active_connections": 95, "error_rate_percent": 5.2},
+  {"timestamp": "2024-01-15T10:21:30Z", "service": "order-service", "cpu_percent": 85.4, "memory_percent": 89.2, "request_latency_ms": 12000, "active_connections": 500, "error_rate_percent": 70.0},
+  {"timestamp": "2024-01-15T10:23:30Z", "service": "payment-service", "cpu_percent": 20.1, "memory_percent": 40.2, "request_latency_ms": 180, "active_connections": 85, "error_rate_percent": 2.0},
+  {"timestamp": "2024-01-15T10:24:00Z", "service": "api-gateway", "cpu_percent": 38.5, "memory_percent": 47.8, "request_latency_ms": 18, "active_connections": 250, "error_rate_percent": 0.5},
+  {"timestamp": "2024-01-15T10:24:00Z", "service": "order-service", "cpu_percent": 42.1, "memory_percent": 55.6, "request_latency_ms": 85, "active_connections": 200, "error_rate_percent": 1.2}
+]
